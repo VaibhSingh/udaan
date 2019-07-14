@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: http://polls.addasset.org/
+HOST: http://polls.addtask.org/
 
 # VaibhSingh
 
@@ -13,21 +13,21 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
         [
             {
-                "question": "Asset needed",
+                "question": "task performed",
                 "published_at": "2015",
                 "choices": [
                     {
-                        "choice": "chair",
+                        "choice": "vaccum",
                         "votes": 20
                     }, {
-                        "choice": "table",
+                        "choice": "mop",
                         "votes": 10
                     }, {
-                        "choice": "carpet",
+                        "choice": "clean",
                         "votes": 5
                     }, {
-                        "choice": "soap",
-                        "votes": 256
+                        "choice": "refill",
+                        "votes": 25
                     }
                 ]
             }
@@ -42,12 +42,12 @@ form of choices.
 + Request (application/json)
 
         {
-            "question": "Asset needed",
+            "question": "task performed",
             "choices": [
-                "chair",
-                "table",
-                "carpet",
-                "saop"
+                "vaccum",
+                "mop",
+                "clean",
+                "refill"
             ]
         }
 
@@ -60,20 +60,20 @@ form of choices.
     + Body
 
             {
-                "question": "Asset needed",
+                "question": "task performed",
                 "published_at": "2015",
                 "choices": [
                     {
-                        "choice": "chair",
+                        "choice": "vaccum",
                         "votes": 0
                     }, {
-                        "choice": "table",
+                        "choice": "mop",
                         "votes": 0
                     }, {
-                        "choice": "carpet",
+                        "choice": "clean",
                         "votes": 0
                     }, {
-                        "choice": "soap",
+                        "choice": "refill",
                         "votes": 0
                     }
                 ]
