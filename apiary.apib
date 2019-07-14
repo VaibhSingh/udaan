@@ -1,0 +1,80 @@
+FORMAT: 1A
+HOST: http://polls.addasset.org/
+
+# VaibhSingh
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Questions Collection [/questions]
+
+### List All Questions [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "question": "Asset needed",
+                "published_at": "2015",
+                "choices": [
+                    {
+                        "choice": "chair",
+                        "votes": 20
+                    }, {
+                        "choice": "table",
+                        "votes": 10
+                    }, {
+                        "choice": "carpet",
+                        "votes": 5
+                    }, {
+                        "choice": "soap",
+                        "votes": 256
+                    }
+                ]
+            }
+        ]
+
+### Create a New Question [POST]
+
+You may create your own question using this action. It takes a JSON
+object containing a question and a collection of answers in the
+form of choices.
+
++ Request (application/json)
+
+        {
+            "question": "Asset needed",
+            "choices": [
+                "chair",
+                "table",
+                "carpet",
+                "saop"
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Asset needed",
+                "published_at": "2015",
+                "choices": [
+                    {
+                        "choice": "chair",
+                        "votes": 0
+                    }, {
+                        "choice": "table",
+                        "votes": 0
+                    }, {
+                        "choice": "carpet",
+                        "votes": 0
+                    }, {
+                        "choice": "soap",
+                        "votes": 0
+                    }
+                ]
+            }
